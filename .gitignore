@@ -1,3 +1,10 @@
+wandb
+raw_data
+data
+tmp_models
+*.p
+*.pt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -13,8 +13,7 @@ from src.utils.data_utils import process_data, read_from_file, write_to_file
 from src.utils.process_irregular_data import *
 from trainer import trainer
 
-os.environ["WANDB_API_KEY"] = "ADD YOUR WANDB API KEY HERE"
-wandb_entity = "ADD YOUR WANDB ENTITY HERE"
+wandb_entity = "te_cde_run"
 
 
 def init_arg():
@@ -55,7 +54,7 @@ if __name__ == "__main__":
     # start a new run
     run = wandb.init(
         project="te_cde_run",
-        entity=wandb_entity,
+        # entity=wandb_entity,
         config=f"./experiments/{args.experiment}.yml",
     )
 
@@ -112,7 +111,7 @@ if __name__ == "__main__":
         )
 
     else:
-        transformed_datapath = f"/content/drive/MyDrive/kappa{kappa}/new_cancer_sim_{coeff}_{coeff}_kappa_{kappa}.p"
+        transformed_datapath = f"./data/new_cancer_sim_{coeff}_{coeff}_kappa_{kappa}.p"
         logging.info(f"Loading transformed data from {transformed_datapath}")
         pickle_map = read_from_file(transformed_datapath)
 
