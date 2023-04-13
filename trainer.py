@@ -202,7 +202,7 @@ class trainer:
 
         # create train data_loader
         dataset = torch.utils.data.TensorDataset(coeffs, data_y, data_tr)
-        dataloader = torch.utils.data.DataLoader(dataset, batch_size=512)
+        dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size)
 
         return dataloader, data_shape
 
@@ -252,7 +252,7 @@ class trainer:
 
         # create train data_loader
         dataset = torch.utils.data.TensorDataset(coeffs, data_y, data_tr)
-        dataloader = torch.utils.data.DataLoader(dataset, batch_size=512)
+        dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size)
         return dataloader, data_shape
 
     def fit(self, train_data, validation_data, epochs, patience, batch_size):

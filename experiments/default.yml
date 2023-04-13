@@ -23,5 +23,5 @@ sample_proportion:
   value: 1
   desc: "proportion of dataset to sample"
 batch_size:
-  value: 32
+  value: 512
   desc: "batch size"
